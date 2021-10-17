@@ -1,0 +1,47 @@
+
+.todo {
+    display: flex;
+    padding: 5px 10px;
+    background-color: white;
+    margin: 5px 10px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+  
+    &.done {
+      background-color: #ffffff4d;
+      color: #4e4e4e;
+      .content{
+          text-decoration: line-through;
+      }
+      .check {
+        color: #4ebb4e;
+      }
+    }
+
+    .id {
+        flex-basis: 5%;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .content {
+        flex-basis: 80%;
+        word-break: break-all;
+        
+      }
+
+      .button-wrappper {
+        display: flex;
+        border-radius: 5px;
+      }
+      button {
+        border: none;
+        background: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 5px;
+        width: 35px;
+    }
+  }
