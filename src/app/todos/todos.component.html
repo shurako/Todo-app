@@ -1,33 +1,38 @@
 <div class="todos">
-    
-    <div class="form__wrapper">
-        <form (submit)="addTodo()" class="inputForm">
-          <input
-            name="inputTodo"
-            type="text"
-            [(ngModel)]="inputTodo"
-            class="inputTodo"
-          />
-          <button class="submit-btn" type="submit">
-            <fa-icon [icon]="faPlus"></fa-icon>
-            <span class="button-text">add</span>
-          </button>
-        </form>
-      </div>
-  
-    <div
-      *ngFor="let todo of todos; let i = index"
-      class="todo  {{ todo.completed ? 'done' : '' }}  "
-    >
-      <div class="id">{{ i + 1 }}.</div>
-      <div class="content">{{ todo.content }}</div>
-      <div class="button-wrappper">
-        <button (click) = "toggleDone(i)"  class="check">
-          <fa-icon [icon]="faCheck"></fa-icon>
-        </button>
-        <button  class="delete">
-          <fa-icon [icon]="faTrash"></fa-icon>
-        </button>
-      </div>
+  <div class="form__wrapper">
+    <form (submit)="addTodo()" class="inputForm">
+      <input
+        name="inputTodo"
+        type="text"
+        [(ngModel)]="inputTodo"
+        class="inputTodo"
+      />
+      <button class="submit-btn" type="submit">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        <span class="button-text">add</span>
+      </button>
+    </form>
+  </div>
+
+  <app-filter
+    [filteredTodos]="filteredTodos"
+    (filteredTodosChange)="filteredTodos = $event"
+    [todos]="todos"
+  ></app-filter>
+
+  <div
+    *ngFor="let todo of todos; let i = index"
+    class="todo  {{ todo.completed ? 'done' : '' }}  "
+  >
+    <div class="id">{{ i + 1 }}.</div>
+    <div class="content">{{ todo.content }}</div>
+    <div class="button-wrappper">
+      <button (click)="toggleDone(i)" class="check">
+        <fa-icon [icon]="faCheck"></fa-icon>
+      </button>
+      <button class="delete">
+        <fa-icon [icon]="faTrash"></fa-icon>
+      </button>
     </div>
   </div>
+</div>

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TodosComponent } from './todos/todos.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterComponent } from './todos/filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    TodosComponent
+    TodosComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
