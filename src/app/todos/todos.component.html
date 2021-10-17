@@ -30,7 +30,7 @@
       <button (click)="toggleDone(i)" class="check">
         <fa-icon [icon]="faCheck"></fa-icon>
       </button>
-      <button class="delete">
+      <button (click)="removeTodo(i)" class="delete">
         <fa-icon [icon]="faTrash"></fa-icon>
       </button>
     </div>
