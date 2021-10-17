@@ -1,0 +1,38 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e66465, #9198e5);
+  }
+  
+  .container {
+    width: 500px;
+    height: 600px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #ffffffb3;
+    /* align-items: center; */
+    margin: 10px;
+    overflow-y: scroll;
+  
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+  
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+  }
+  
