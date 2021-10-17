@@ -1,5 +1,19 @@
 <div class="todos">
-   
+    
+    <div class="form__wrapper">
+        <form (submit)="addTodo()" class="inputForm">
+          <input
+            name="inputTodo"
+            type="text"
+            [(ngModel)]="inputTodo"
+            class="inputTodo"
+          />
+          <button class="submit-btn" type="submit">
+            <fa-icon [icon]="faPlus"></fa-icon>
+            <span class="button-text">add</span>
+          </button>
+        </form>
+      </div>
   
     <div
       *ngFor="let todo of todos; let i = index"

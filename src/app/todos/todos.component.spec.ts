@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 
 import { TodosComponent } from './todos.component';
 
@@ -22,4 +22,17 @@ describe('TodosComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should add todo', () => {
+    fixture.componentInstance.inputTodo = 'Test note'
+    fixture.componentInstance.addTodo()
+    expect(fixture.componentInstance.todos = [...fixture.componentInstance.todos, { content: 'Test note', completed: false}])
+  
+  })
+
+
+
 });
+
+
+

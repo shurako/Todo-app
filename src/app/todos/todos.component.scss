@@ -45,3 +45,75 @@
         width: 35px;
     }
   }
+
+  .submit-btn{
+    font-weight: 600;
+    background: #e66465;
+    border-radius: 0px 5px 5px 0;
+    color: whitesmoke;
+    font-size: 13px;
+    display: flex;
+    width: 67px;
+    justify-content: center;
+
+    fa-icon{
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        
+    }
+}
+
+
+.form__wrapper{
+    background-color: white;
+    margin: 5px 10px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0px
+}
+
+.inputForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: white;
+    :focus{
+        outline: none;
+        background-color: white;
+    }
+    
+}
+
+
+
+.inputTodo{
+    width: 80%;
+    border: none;
+    padding: 0 5px;
+    display: flex;
+    flex-grow: 1;
+    border-radius: 5px;
+
+}
+
+button {
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+    width: 35px;
+  
+    &.check {
+      //background-color: #25e525;
+    }
+  
+    &.delete {
+      //background-color: #d52d2d;
+    }
+  }
