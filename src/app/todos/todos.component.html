@@ -8,7 +8,7 @@
       <div class="id">{{ i + 1 }}.</div>
       <div class="content">{{ todo.content }}</div>
       <div class="button-wrappper">
-        <button  class="check">
+        <button (click) = "toggleDone(i)"  class="check">
           <fa-icon [icon]="faCheck"></fa-icon>
         </button>
         <button  class="delete">
