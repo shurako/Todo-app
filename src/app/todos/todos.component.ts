@@ -51,4 +51,10 @@ export class TodosComponent implements OnInit {
 
     this.inputTodo = ''
   }
+
+  removeTodo(id: number) {
+    this.todos.map((todo, i) => {
+      if (id === i) { this.todos.splice(i, 1); }
+    })
+  }
 }
