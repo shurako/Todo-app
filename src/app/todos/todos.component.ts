@@ -32,6 +32,8 @@ export class TodosComponent implements OnInit {
       }
     ];
 
+    this.filteredTodos = this.todos;
+
   }
 
 

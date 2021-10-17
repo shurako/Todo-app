@@ -21,7 +21,7 @@
   ></app-filter>
 
   <div
-    *ngFor="let todo of todos; let i = index"
+    *ngFor="let todo of filteredTodos; let i = index"
     class="todo  {{ todo.completed ? 'done' : '' }}  "
   >
     <div class="id">{{ i + 1 }}.</div>
