@@ -1,19 +1,36 @@
 <div class="todos">
   <div class="form__wrapper">
-    <form (submit)="addTodo()" class="inputForm">
+    <form
+      required
+      #inputForm
+      (submit)="name.valid && addTodo() ? inputForm.reset() : '' "
+      class="inputForm form-group"
+      method="post"
+    >
       <input
         name="inputTodo"
         type="text"
         [(ngModel)]="inputTodo"
-        class="inputTodo"
+        class="inputTodo "
+        minlength="2"
+        #name="ngModel"
+        (submit) = inputForm.reset()
+        required
+        autocomplete="off"
       />
+
       <button class="submit-btn" type="submit">
         <fa-icon [icon]="faPlus"></fa-icon>
         <span class="button-text">add</span>
       </button>
     </form>
   </div>
-
+  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+    <div *ngIf="name.errors?.required && name.touched ">*Todo is required.</div>
+    <div *ngIf="name.errors?.minlength">
+      *Todo must be at least 2 characters long.
+    </div>
+  </div>
   <app-filter
     [filteredTodos]="filteredTodos"
     (filteredTodosChange)="filteredTodos = $event"

@@ -35,7 +35,7 @@ export class TodosComponent implements OnInit {
     this.filteredTodos = this.todos;
 
   }
-
+  
 
   toggleDone(id: number) {
     this.todos.map((todo, i) => {
@@ -48,8 +48,7 @@ export class TodosComponent implements OnInit {
       content: this.inputTodo,
       completed: false,
     })
-
-    this.inputTodo = ''
+    return true;
   }
 
   removeTodo(id: number) {

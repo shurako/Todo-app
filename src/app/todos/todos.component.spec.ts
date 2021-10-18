@@ -1,4 +1,5 @@
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { TodosComponent } from './todos.component';
 
@@ -8,6 +9,9 @@ describe('TodosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        FormsModule,
+      ],
       declarations: [ TodosComponent ]
     })
     .compileComponents();
